@@ -1,103 +1,183 @@
 import Image from "next/image";
+import { FaCog, FaUserAlt, FaShieldAlt, FaRegSmile } from "react-icons/fa";
+
+const offerings = [
+  {
+    icon: "/icons/whatWeOffer/interactive-toys.png",
+    title: "Interactive Toys",
+    subtitle: "Engaging Experiences",
+    content:
+      "Experience our range of interactive toys that promote learning, creativity, and sensory development. These toys are specially crafted to enhance the playtime experience for children of all abilities, making learning enjoyable and engaging.",
+  },
+  {
+    icon: "/icons/whatWeOffer/ARGlasses.png",
+    title: "AR Glasses Interaction",
+    subtitle: "Augmented Reality Fun",
+    content:
+      "Immerse yourself in a world of augmented reality with our toys that seamlessly interact with AI-powered glasses. Through this innovative technology, children can enjoy interactive challenges and educational content, fostering creativity and cognitive development.",
+  },
+  {
+    icon: "/icons/whatWeOffer/feedback.png",
+    title: "Feedback and Challenges",
+    subtitle: "Real-time Engagement",
+    content:
+      "Experience our range of interactive toys that promote learning, creativity, and sensory development. These toys are specially crafted to enhance the playtime experience for children of all abilities, making learning enjoyable and engaging.",
+  },
+  {
+    icon: "/icons/whatWeOffer/community.png",
+    title: "Community Building",
+    subtitle: "Supportive Networks",
+    content:
+      "Join our community dedicated to supporting autistic kids and their families. Discover resources, connect with other parents and carers, and share experiences in a supportive and inclusive environment that celebrates the uniqueness and potential of every child.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div>
+      <section className="container mx-auto">
+        <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 bg-white">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4">
+            INNOVATIVE
+          </h1>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4">
+            INTERACTIVE TOYS
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 mb-6">
+            Enhancing Playful Learning Experiences
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <button className="flex items-center gap-2 bg-[#C1D81D] text-black cursor-pointer font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#d4e171] transition mb-12">
+            <span className="text-2xl">
+              <Image
+                src="/icons/faces-icon.png"
+                alt="Arrow Right"
+                width={74}
+                height={74}
+                className="inline-block"
+              />
+            </span>{" "}
+            Join Our Waitlist
+          </button>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
+            <div className="flex flex-col items-center text-center">
+              <FaCog className="text-3xl text-rose-200 mb-2" />
+              <p className="text-sm font-medium">
+                SCIENCE-BACKED
+                <br />
+                DESIGN
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <FaUserAlt className="text-3xl text-purple-200 mb-2" />
+              <p className="text-sm font-medium">
+                DESIGNED TO LAST
+                <br />
+                AND A TICK
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <FaShieldAlt className="text-3xl text-green-200 mb-2" />
+              <p className="text-sm font-medium">
+                INCLUSIVE FOR ALL
+                <br />
+                MINDS
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <FaRegSmile className="text-3xl text-sky-200 mb-2" />
+              <p className="text-sm font-medium">
+                ENCOURAGES
+                <br />
+                MOOD REGULATION
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      <section className="relative bg-[#FCF2E9] text-center py-20 px-4">
+        <div className="container mx-auto">
+          {/* Sparkles */}
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={"/icons/stars.png"}
+            width={50}
+            height={50}
+            alt="Sparkles"
+            className="absolute top-8 md:top-38 md:left-8 text-blue-900 text-2xl sm:text-3xl rotate-45"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src={"/icons/stars.png"}
+            width={50}
+            height={50}
+            alt="Sparkles"
+            className="absolute bottom-8 md:bottom-16 left-18 text-blue-900 text-2xl sm:text-3xl rotate-45"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src={"/icons/stars.png"}
+            width={50}
+            height={50}
+            alt="Sparkles"
+            className="absolute bottom-8 right-12 text-blue-900 text-2xl sm:text-3xl rotate-45"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+          {/* Text */}
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
+              WE DESIGN TOYS THAT LAST
+              <br />
+              <span className="inline-block mt-4">
+                FOR NON-VERBAL PEOPLE WITH COMPLEX
+              </span>
+              <br />
+              <span className="inline-block mt-4">NEEDS</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto ">
+        <main className="py-24 px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            WHAT WE OFFER?
+          </h2>
+          <p className="text-gray-700 max-w-2xl mx-auto mb-10">
+            Dive into our collection of innovative sensory toys that provide
+            real-time feedback and challenges through augmented reality. Each
+            product is designed to engage and support autistic children,
+            parents, and carers in a fun and meaningful way.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {offerings.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col group justify-between bg-[#FCF2E9] min-h-72 border-slate-950 border-2 border-solid  drop-shadow-xl/50 px-6 py-8 text-left hover:shadow-lg transition-shadow duration-200"
+              >
+                <div>
+                  <Image
+                    className="mb-4"
+                    src={item.icon}
+                    height={20}
+                    width={20}
+                    alt="icons"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 transform transition-transform duration-300 group-hover:-translate-y-3">
+                    {item.title}
+                  </h3>
+                </div>
+                <div className="bg-white rounded px-2 py-4 text-sm font-medium text-gray-800 inline-block">
+                  <p className="font-semibold">{item.subtitle}</p>
+                  <p className="opacity-0 max-h-0 overflow-hidden transition-all duration-1300 group-hover:opacity-100 group-hover:max-h-40 group-hover:mt-4">
+                    {item.content}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </main>
+      </section>
     </div>
   );
 }
