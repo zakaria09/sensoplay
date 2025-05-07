@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-[#FCF2E9] text-center py-20 px-4">
+      <section className="relative bg-[#FCF2E9] text-center py-62 px-4">
         <div className="container mx-auto">
           {/* Sparkles */}
           <Image
@@ -127,11 +127,14 @@ export default function Home() {
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
               WE DESIGN TOYS THAT LAST
               <br />
-              <span className="inline-block mt-4">
-                FOR NON-VERBAL PEOPLE WITH COMPLEX
+              <span className="inline-block ">
+                FOR{" "}
+                <span className="text-[#7c8725] text-shadow-md my-4">
+                  NON-VERBAL PEOPLE{" "}
+                </span>
+                <br />
+                <p>WITH COMPLEX NEEDS</p>
               </span>
-              <br />
-              <span className="inline-block mt-4">NEEDS</span>
             </h2>
           </div>
         </div>
