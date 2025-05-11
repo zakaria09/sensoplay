@@ -56,6 +56,30 @@ const cards = [
   },
 ];
 
+const approach = [
+  {
+    id: 1,
+    img: "/images/ourApproach/design.png",
+    title: "User-Centered Design",
+    content:
+      "We focus on intuitive, easy-to-use, and engaging designs that meet the needs of both users and caregivers.",
+  },
+  {
+    id: 2,
+    img: "/images/ourApproach/inclusion.png",
+    title: "Inclusive Innovation",
+    content:
+      "Our toys integrate sensory-friendly materials and technology to ensure accessibility for all.",
+  },
+  {
+    id: 3,
+    img: "/images/ourApproach/community.png",
+    title: "Community Engagement",
+    content:
+      "We collaborate with therapists, educators, and families to refine our products based on real-world feedback",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -231,6 +255,42 @@ export default function Home() {
                     alt="icons"
                   />
                 </div>
+                <div className="px-4 py-2 flex flex-col justify-between">
+                  <h3 className="py-4 text-xl font-semibold text-gray-900 ">
+                    {item.title}
+                  </h3>
+                  <p className="pb-2 font-medium text-gray-800">
+                    {item.content}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </main>
+      </section>
+
+      <section className="container mx-auto ">
+        <main className="py-24 px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Approach
+          </h2>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
+            We consider the needs of both the carer and the non-verbal recipient
+            when designing our products.
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl justify-items-center">
+            {approach.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col justify-between w-[320px] py-8 bg-white "
+              >
+                <Image
+                  className="self-center"
+                  src={item.img}
+                  height={150}
+                  width={150}
+                  alt="icons"
+                />
                 <div className="px-4 py-2 flex flex-col justify-between">
                   <h3 className="py-4 text-xl font-semibold text-gray-900 ">
                     {item.title}
