@@ -32,6 +32,30 @@ const offerings = [
   },
 ];
 
+const cards = [
+  {
+    id: 1,
+    img: "/images/whatWeOffer/interactive.png",
+    title: "Designed for Engagement",
+    content:
+      "We create toys and accessories that cater to the unique needs of non-verbal autistic individuals, ensuring an engaging and enjoyable experience.",
+  },
+  {
+    id: 2,
+    img: "/images/whatWeOffer/durable.png",
+    title: "Built for Ease",
+    content:
+      "Our products are designed with practicality in mind—built to last, effortless to use, and easy to maintain for both individuals and caregivers.",
+  },
+  {
+    id: 3,
+    img: "/images/whatWeOffer/caregiver.png",
+    title: "Caregiver-Friendly",
+    content:
+      "We consider the needs of both non-verbal individuals and their caregivers, creating toys that bring comfort, joy, and ease into daily life.",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -145,7 +169,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             WHAT WE OFFER?
           </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto mb-10">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
             Dive into our collection of innovative sensory toys that provide
             real-time feedback and challenges through augmented reality. Each
             product is designed to engage and support autistic children,
@@ -173,6 +197,45 @@ export default function Home() {
                 <div className="bg-white rounded px-2 py-4 text-sm font-medium text-gray-800 inline-block">
                   <p className="font-semibold">{item.subtitle}</p>
                   <p className="opacity-0 max-h-0 overflow-hidden transition-all duration-1300 group-hover:opacity-100 group-hover:max-h-40 group-hover:mt-4">
+                    {item.content}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </main>
+      </section>
+
+      <section className="container mx-auto ">
+        <main className="py-24 px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Why Choose Us?
+          </h2>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
+            We consider the needs of both the carer and the non-verbal recipient
+            when designing our products.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl justify-items-center">
+            {cards.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col justify-between w-[320px] border-slate-950 border-2 border-solid text-left bg-white shadow-[6px_6px_0px_#888888]"
+              >
+                <div className="bg-[#FCF2E9]">
+                  <Image
+                    className=""
+                    src={item.img}
+                    height={288}
+                    width={358}
+                    alt="icons"
+                  />
+                </div>
+                <div className="px-4 py-2 flex flex-col justify-between">
+                  <h3 className="py-4 text-xl font-semibold text-gray-900 ">
+                    {item.title}
+                  </h3>
+                  <p className="pb-2 font-medium text-gray-800">
                     {item.content}
                   </p>
                 </div>
