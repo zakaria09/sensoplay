@@ -80,6 +80,48 @@ const approach = [
   },
 ];
 
+const values = [
+  {
+    id: 1,
+    icon: "/images/ourValues/safety.png",
+    title: "Safety and Durability",
+    content:
+      "Risk-free toys, safer and made for quality material for long durable toys.",
+  },
+  {
+    id: 2,
+    icon: "/images/ourValues/sustainable.png",
+    title: "Sustainable",
+    content: "Eco-friendly toys, plastic free, and socially responsible.",
+  },
+  {
+    id: 3,
+    icon: "/images/ourValues/community.png",
+    title: "Community",
+    content: "Designed in community, for community benefits.",
+  },
+  {
+    id: 4,
+    icon: "/images/ourValues/inclusion.png",
+    title: "Inclusion",
+    content:
+      "Inclusive design and educational positioning, to integrate the entire community.",
+  },
+  {
+    id: 5,
+    icon: "/images/ourValues/fun.png",
+    title: "Fun and Development",
+    content:
+      "Sensory, happy, fun and educational. Capable of entertaining at the same time that develops.",
+  },
+  {
+    id: 6,
+    icon: "/images/ourValues/practicality.png",
+    title: "Practicality",
+    content: "Easy to play and easy to clean.",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -230,7 +272,7 @@ export default function Home() {
         </main>
       </section>
 
-      <section className="container mx-auto ">
+      <section className="container mx-auto">
         <main className="py-24 px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Why Choose Us?
@@ -240,11 +282,11 @@ export default function Home() {
             when designing our products.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl justify-items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto justify-items-center">
             {cards.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col justify-between w-[320px] border-slate-950 border-2 border-solid text-left bg-white shadow-[6px_6px_0px_#888888]"
+                className="flex flex-col justify-between max-w-[320px] border-slate-950 border-2 border-solid text-left bg-white shadow-[6px_6px_0px_#888888]"
               >
                 <div className="bg-[#FCF2E9]">
                   <Image
@@ -278,11 +320,11 @@ export default function Home() {
             We consider the needs of both the carer and the non-verbal recipient
             when designing our products.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl justify-items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto justify-items-center">
             {approach.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col justify-between w-[320px] py-8 bg-white "
+                className="flex flex-col justify-between py-8 bg-white "
               >
                 <Image
                   className="self-center"
@@ -303,6 +345,132 @@ export default function Home() {
             ))}
           </div>
         </main>
+      </section>
+
+      <section className="container mx-auto px-4 py-24">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-black mb-4">Our Values</h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
+            We consider the needs of both the carer and the non-verbal recipient
+            when designing our products.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {values.map((item) => (
+            <div
+              key={item.id}
+              className="bg-[#FAF7F2] border border-black shadow-[4px_6px_0px_rgba(0,0,0,1)] px-6 py-8 text-center flex flex-col items-center"
+            >
+              <div className="mb-4">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-black mb-2">
+                {item.title}
+              </h3>
+              <p className="text-gray-700 font-medium">{item.content}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="w-full bg-[#FDF6F6] px-4 py-24">
+        <div className="max-w-4xl mx-auto border border-black bg-white shadow-[6px_6px_0_0_#000] p-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            The Sensoplay Difference
+          </h2>
+          <p className="text-lg text-slate-700 leading-relaxed">
+            We are a community led initiative designing innovative experiences
+            for neurodivergent individuals with complex needs.
+          </p>
+        </div>
+      </section>
+
+      <section className=" bg-[#FCF2E9]">
+        <div className="container mx-auto px-4 py-24">
+          <div className="flex justify-between items-center">
+            {/* Image Section */}
+            <div className="hidden md:block">
+              <Image
+                src="/images/contactUs/contactUs.png"
+                alt="Contact Us"
+                width={500}
+                height={500}
+              />
+            </div>
+
+            {/* Form Section */}
+            <div>
+              <div className="text-center mb-8">
+                <h2 className="text-lg font-bold text-[#F39184] mb-2">
+                  Contact Us
+                </h2>
+                <p className="text-2xl text-slate-950 font-semibold mb-8">
+                  Join Our Mission To Develop
+                  <br />
+                  Amazing Toys For Non-Verbal Individuals.
+                </p>
+              </div>
+
+              <form className="space-y-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="First Name"
+                    />
+                  </div>
+
+                  <div>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+                <div className="flex w-full justify-end">
+                  <button
+                    type="submit"
+                    className="bg-[#F39184] hover:bg-[#f8b7ae] cursor-pointer text-white font-medium py-2 px-4 shadow-[6px_6px_0_0_#000]"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
