@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaCog, FaUserAlt, FaShieldAlt, FaRegSmile } from "react-icons/fa";
+import FadeInWrapper from "./components/animation";
 
 const offerings = [
   {
@@ -126,65 +127,67 @@ export default function Home() {
   return (
     <div>
       <section className="container mx-auto">
-        <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 bg-white">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4">
-            INNOVATIVE
-          </h1>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4">
-            INTERACTIVE TOYS
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600 mb-6">
-            Enhancing Playful Learning Experiences
-          </p>
+        <FadeInWrapper>
+          <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 bg-white">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4">
+              INNOVATIVE
+            </h1>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4">
+              INTERACTIVE TOYS
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 mb-6">
+              Enhancing Playful Learning Experiences
+            </p>
 
-          <button className="flex items-center gap-2 bg-[#C1D81D] text-black cursor-pointer font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#d4e171] transition mb-12">
-            <span className="text-2xl">
-              <Image
-                src="/icons/faces-icon.png"
-                alt="Arrow Right"
-                width={74}
-                height={74}
-                className="inline-block"
-              />
-            </span>{" "}
-            Join Our Waitlist
-          </button>
+            <button className="flex items-center gap-2 bg-[#C1D81D] text-black cursor-pointer font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#d4e171] transition mb-12">
+              <span className="text-2xl">
+                <Image
+                  src="/icons/faces-icon.png"
+                  alt="Arrow Right"
+                  width={74}
+                  height={74}
+                  className="inline-block"
+                />
+              </span>{" "}
+              Join Our Waitlist
+            </button>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
-            <div className="flex flex-col items-center text-center">
-              <FaCog className="text-3xl text-rose-200 mb-2" />
-              <p className="text-sm font-medium">
-                SCIENCE-BACKED
-                <br />
-                DESIGN
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <FaUserAlt className="text-3xl text-purple-200 mb-2" />
-              <p className="text-sm font-medium">
-                DESIGNED TO LAST
-                <br />
-                AND A TICK
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <FaShieldAlt className="text-3xl text-green-200 mb-2" />
-              <p className="text-sm font-medium">
-                INCLUSIVE FOR ALL
-                <br />
-                MINDS
-              </p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <FaRegSmile className="text-3xl text-sky-200 mb-2" />
-              <p className="text-sm font-medium">
-                ENCOURAGES
-                <br />
-                MOOD REGULATION
-              </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
+              <div className="flex flex-col items-center text-center">
+                <FaCog className="text-3xl text-rose-200 mb-2" />
+                <p className="text-sm font-medium">
+                  SCIENCE-BACKED
+                  <br />
+                  DESIGN
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <FaUserAlt className="text-3xl text-purple-200 mb-2" />
+                <p className="text-sm font-medium">
+                  DESIGNED TO LAST
+                  <br />
+                  AND A TICK
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <FaShieldAlt className="text-3xl text-green-200 mb-2" />
+                <p className="text-sm font-medium">
+                  INCLUSIVE FOR ALL
+                  <br />
+                  MINDS
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <FaRegSmile className="text-3xl text-sky-200 mb-2" />
+                <p className="text-sm font-medium">
+                  ENCOURAGES
+                  <br />
+                  MOOD REGULATION
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </FadeInWrapper>
       </section>
 
       <section className="relative bg-[#FCF2E9] text-center py-62 px-4">
@@ -212,264 +215,282 @@ export default function Home() {
             className="absolute bottom-8 right-12 text-blue-900 text-2xl sm:text-3xl rotate-45"
           />
 
-          {/* Text */}
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
-              WE DESIGN TOYS THAT LAST
-              <br />
-              <span className="inline-block ">
-                FOR{" "}
-                <span className="text-[#7c8725] text-shadow-md my-4">
-                  NON-VERBAL PEOPLE{" "}
-                </span>
+          <FadeInWrapper>
+            {/* Text */}
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
+                WE DESIGN TOYS THAT LAST
                 <br />
-                <p>WITH COMPLEX NEEDS</p>
-              </span>
-            </h2>
-          </div>
+                <span className="inline-block ">
+                  FOR{" "}
+                  <span className="text-[#7c8725] text-shadow-md my-4">
+                    NON-VERBAL PEOPLE{" "}
+                  </span>
+                  <br />
+                  <p>WITH COMPLEX NEEDS</p>
+                </span>
+              </h2>
+            </div>
+          </FadeInWrapper>
         </div>
       </section>
 
       <section className="container mx-auto ">
         <main className="py-24 px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            WHAT WE OFFER?
-          </h2>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
-            Dive into our collection of innovative sensory toys that provide
-            real-time feedback and challenges through augmented reality. Each
-            product is designed to engage and support autistic children,
-            parents, and carers in a fun and meaningful way.
-          </p>
+          <FadeInWrapper>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              WHAT WE OFFER?
+            </h2>
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
+              Dive into our collection of innovative sensory toys that provide
+              real-time feedback and challenges through augmented reality. Each
+              product is designed to engage and support autistic children,
+              parents, and carers in a fun and meaningful way.
+            </p>
+          </FadeInWrapper>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {offerings.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col group justify-between bg-[#FCF2E9] min-h-72 border-slate-950 border-2 border-solid  drop-shadow-xl/50 px-6 py-8 text-left hover:shadow-lg transition-shadow duration-200"
-              >
-                <div>
-                  <Image
-                    className="mb-4"
-                    src={item.icon}
-                    height={20}
-                    width={20}
-                    alt="icons"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 transform transition-transform duration-300 group-hover:-translate-y-3">
-                    {item.title}
-                  </h3>
+          <FadeInWrapper>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {offerings.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col group justify-between bg-[#FCF2E9] min-h-72 border-slate-950 border-2 border-solid  drop-shadow-xl/50 px-6 py-8 text-left hover:shadow-lg transition-shadow duration-200"
+                >
+                  <div>
+                    <Image
+                      className="mb-4"
+                      src={item.icon}
+                      height={20}
+                      width={20}
+                      alt="icons"
+                    />
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 transform transition-transform duration-300 group-hover:-translate-y-3">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <div className="bg-white rounded px-2 py-4 text-sm font-medium text-gray-800 inline-block">
+                    <p className="font-semibold">{item.subtitle}</p>
+                    <p className="opacity-0 max-h-0 overflow-hidden transition-all duration-1300 group-hover:opacity-100 group-hover:max-h-40 group-hover:mt-4">
+                      {item.content}
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-white rounded px-2 py-4 text-sm font-medium text-gray-800 inline-block">
-                  <p className="font-semibold">{item.subtitle}</p>
-                  <p className="opacity-0 max-h-0 overflow-hidden transition-all duration-1300 group-hover:opacity-100 group-hover:max-h-40 group-hover:mt-4">
-                    {item.content}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </FadeInWrapper>
         </main>
       </section>
 
       <section className="container mx-auto">
         <main className="py-24 px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Why Choose Us?
-          </h2>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
-            We consider the needs of both the carer and the non-verbal recipient
-            when designing our products.
-          </p>
+          <FadeInWrapper>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Choose Us?
+            </h2>
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
+              We consider the needs of both the carer and the non-verbal
+              recipient when designing our products.
+            </p>
+          </FadeInWrapper>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto justify-items-center">
-            {cards.map((item) => (
-              <div
-                key={item.id}
-                className="flex flex-col justify-between max-w-[320px] border-slate-950 border-2 border-solid text-left bg-white shadow-[6px_6px_0px_#888888]"
-              >
-                <div className="bg-[#FCF2E9]">
-                  <Image
-                    className=""
-                    src={item.img}
-                    height={288}
-                    width={358}
-                    alt="icons"
-                  />
+          <FadeInWrapper>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto justify-items-center">
+              {cards.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex flex-col justify-between max-w-[320px] border-slate-950 border-2 border-solid text-left bg-white shadow-[6px_6px_0px_#888888]"
+                >
+                  <div className="bg-[#FCF2E9]">
+                    <Image
+                      className=""
+                      src={item.img}
+                      height={288}
+                      width={358}
+                      alt="icons"
+                    />
+                  </div>
+                  <div className="px-4 py-2 flex flex-col justify-between">
+                    <h3 className="py-4 text-xl font-semibold text-gray-900 ">
+                      {item.title}
+                    </h3>
+                    <p className="pb-2 font-medium text-gray-800">
+                      {item.content}
+                    </p>
+                  </div>
                 </div>
-                <div className="px-4 py-2 flex flex-col justify-between">
-                  <h3 className="py-4 text-xl font-semibold text-gray-900 ">
-                    {item.title}
-                  </h3>
-                  <p className="pb-2 font-medium text-gray-800">
-                    {item.content}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </FadeInWrapper>
         </main>
       </section>
 
       <section className="container mx-auto ">
         <main className="py-24 px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Our Approach
-          </h2>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
-            We consider the needs of both the carer and the non-verbal recipient
-            when designing our products.
-          </p>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto justify-items-center">
-            {approach.map((item) => (
-              <div
-                key={item.id}
-                className="flex flex-col justify-between py-8 bg-white "
-              >
-                <Image
-                  className="self-center"
-                  src={item.img}
-                  height={150}
-                  width={150}
-                  alt="icons"
-                />
-                <div className="px-4 py-2 flex flex-col justify-between">
-                  <h3 className="py-4 text-xl font-semibold text-gray-900 ">
-                    {item.title}
-                  </h3>
-                  <p className="pb-2 font-medium text-gray-800">
-                    {item.content}
-                  </p>
+          <FadeInWrapper>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Approach
+            </h2>
+            <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-10">
+              We consider the needs of both the carer and the non-verbal
+              recipient when designing our products.
+            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto justify-items-center">
+              {approach.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex flex-col justify-between py-8 bg-white "
+                >
+                  <Image
+                    className="self-center"
+                    src={item.img}
+                    height={150}
+                    width={150}
+                    alt="icons"
+                  />
+                  <div className="px-4 py-2 flex flex-col justify-between">
+                    <h3 className="py-4 text-xl font-semibold text-gray-900 ">
+                      {item.title}
+                    </h3>
+                    <p className="pb-2 font-medium text-gray-800">
+                      {item.content}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </FadeInWrapper>
         </main>
       </section>
 
       <section className="container mx-auto px-4 py-24">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-black mb-4">Our Values</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
-            We consider the needs of both the carer and the non-verbal recipient
-            when designing our products.
-          </p>
-        </div>
+        <FadeInWrapper>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-black mb-4">Our Values</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
+              We consider the needs of both the carer and the non-verbal
+              recipient when designing our products.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {values.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#FAF7F2] border border-black shadow-[4px_6px_0px_rgba(0,0,0,1)] px-6 py-8 text-center flex flex-col items-center"
-            >
-              <div className="mb-4">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={40}
-                  height={40}
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {values.map((item) => (
+              <div
+                key={item.id}
+                className="bg-[#FAF7F2] border border-black shadow-[4px_6px_0px_rgba(0,0,0,1)] px-6 py-8 text-center flex flex-col items-center"
+              >
+                <div className="mb-4">
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={40}
+                    height={40}
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-black mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-700 font-medium">{item.content}</p>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-700 font-medium">{item.content}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FadeInWrapper>
       </section>
 
       <section className="w-full bg-[#FDF6F6] px-4 py-24">
         <div className="max-w-4xl mx-auto border border-black bg-white shadow-[6px_6px_0_0_#000] p-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            The Sensoplay Difference
-          </h2>
-          <p className="text-lg text-slate-700 leading-relaxed">
-            We are a community led initiative designing innovative experiences
-            for neurodivergent individuals with complex needs.
-          </p>
+          <FadeInWrapper>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              The Sensoplay Difference
+            </h2>
+            <p className="text-lg text-slate-700 leading-relaxed">
+              We are a community led initiative designing innovative experiences
+              for neurodivergent individuals with complex needs.
+            </p>
+          </FadeInWrapper>
         </div>
       </section>
 
       <section className=" bg-[#FCF2E9]">
         <div className="container mx-auto px-4 py-24">
-          <div className="flex justify-between items-center">
-            {/* Image Section */}
-            <div className="hidden md:block">
-              <Image
-                src="/images/contactUs/contactUs.png"
-                alt="Contact Us"
-                width={500}
-                height={500}
-              />
-            </div>
-
-            {/* Form Section */}
-            <div>
-              <div className="text-center mb-8">
-                <h2 className="text-lg font-bold text-[#F39184] mb-2">
-                  Contact Us
-                </h2>
-                <p className="text-2xl text-slate-950 font-semibold mb-8">
-                  Join Our Mission To Develop
-                  <br />
-                  Amazing Toys For Non-Verbal Individuals.
-                </p>
+          <FadeInWrapper>
+            <div className="flex justify-between items-center">
+              {/* Image Section */}
+              <div className="hidden md:block">
+                <Image
+                  src="/images/contactUs/contactUs.png"
+                  alt="Contact Us"
+                  width={500}
+                  height={500}
+                />
               </div>
 
-              <form className="space-y-12">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="First Name"
-                    />
+              {/* Form Section */}
+              <div>
+                <div className="text-center mb-8">
+                  <h2 className="text-lg font-bold text-[#F39184] mb-2">
+                    Contact Us
+                  </h2>
+                  <p className="text-2xl text-slate-950 font-semibold mb-8">
+                    Join Our Mission To Develop
+                    <br />
+                    Amazing Toys For Non-Verbal Individuals.
+                  </p>
+                </div>
+
+                <form className="space-y-12">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="First Name"
+                      />
+                    </div>
+
+                    <div>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Last Name"
+                      />
+                    </div>
                   </div>
 
                   <div>
                     <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
+                      type="email"
+                      id="email"
+                      name="email"
                       className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="Last Name"
+                      placeholder="Email"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Email"
-                  />
-                </div>
-
-                <div>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Your Message"
-                  ></textarea>
-                </div>
-                <div className="flex w-full justify-end">
-                  <button
-                    type="submit"
-                    className="bg-[#F39184] hover:bg-[#f8b7ae] cursor-pointer text-white font-medium py-2 px-4 shadow-[6px_6px_0_0_#000]"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
+                  <div>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      className="w-full px-4 py-2 border-b border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Your Message"
+                    ></textarea>
+                  </div>
+                  <div className="flex w-full justify-end">
+                    <button
+                      type="submit"
+                      className="bg-[#F39184] hover:bg-[#f8b7ae] cursor-pointer text-white font-medium py-2 px-4 shadow-[6px_6px_0_0_#000]"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </div>
+          </FadeInWrapper>
         </div>
       </section>
     </div>
