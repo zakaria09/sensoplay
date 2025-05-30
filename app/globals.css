@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.btn-primary {
+  @apply bg-[#F39184] text-white font-bold py-4 px-8 rounded-md;
+}
