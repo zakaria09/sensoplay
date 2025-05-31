@@ -25,6 +25,11 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <footer className="bg-white text-slate-900 py-4 text-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Sensoplay. All rights reserved.
+          </p>
+        </footer>
       </body>
     </html>
   );

@@ -48,7 +48,7 @@ export default function Navbar() {
         stiffness: 200,
         damping: 25,
       }}
-      className="sticky top-0 shadow-sm z-50 bg-white  border-b-4 border-gray-200 border-solid"
+      className="sticky top-0 shadow-lg z-50 bg-white  "
     >
       <div className="flex md:justify-between justify-around container mx-auto py-10">
         <Link
