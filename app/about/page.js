@@ -8,15 +8,19 @@ export default function AboutPage() {
     <div>
       <section className="bg-[#FCF2E9] min-h-[35rem] relative bg-grid">
         <div className="container mx-auto px-4 py-38">
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h1 className="uppercase font-extrabold text-4xl mb-4">About Us</h1>
-            <p className="text-lg text-gray-700 max-w-2xl">
-              We create innovative, engaging, and inclusive toys for non-verbal
-              individuals. We design products that help non-verbal autistic
-              adults and children express themselves in ways that are both fun
-              and meaningful.
-            </p>
-          </div>
+          <FadeInWrapper>
+            <div className="flex flex-col items-center text-center space-y-4">
+              <h1 className="uppercase font-extrabold text-4xl mb-4">
+                About Us
+              </h1>
+              <p className="text-lg text-gray-700 max-w-2xl">
+                We create innovative, engaging, and inclusive toys for
+                non-verbal individuals. We design products that help non-verbal
+                autistic adults and children express themselves in ways that are
+                both fun and meaningful.
+              </p>
+            </div>
+          </FadeInWrapper>
         </div>
         {/* Bottom Curve */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-0">
