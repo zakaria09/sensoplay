@@ -2,96 +2,7 @@ import Image from "next/image";
 import { FaCog, FaUserAlt, FaShieldAlt, FaRegSmile } from "react-icons/fa";
 import FadeInWrapper from "./components/animation";
 import AnimateCards from "./components/AnimateCards";
-
-const cards = [
-  {
-    id: 1,
-    img: "/images/whatWeOffer/interactive.png",
-    title: "Designed for Engagement",
-    content:
-      "We create toys and accessories that cater to the unique needs of non-verbal autistic individuals, ensuring an engaging and enjoyable experience.",
-  },
-  {
-    id: 2,
-    img: "/images/whatWeOffer/durable.png",
-    title: "Built for Ease",
-    content:
-      "Our products are designed with practicality in mind—built to last, effortless to use, and easy to maintain for both individuals and caregivers.",
-  },
-  {
-    id: 3,
-    img: "/images/whatWeOffer/caregiver.png",
-    title: "Caregiver-Friendly",
-    content:
-      "We consider the needs of both non-verbal individuals and their caregivers, creating toys that bring comfort, joy, and ease into daily life.",
-  },
-];
-
-const approach = [
-  {
-    id: 1,
-    img: "/images/ourApproach/design.png",
-    title: "User-Centered Design",
-    content:
-      "We focus on intuitive, easy-to-use, and engaging designs that meet the needs of both users and caregivers.",
-  },
-  {
-    id: 2,
-    img: "/images/ourApproach/inclusion.png",
-    title: "Inclusive Innovation",
-    content:
-      "Our toys integrate sensory-friendly materials and technology to ensure accessibility for all.",
-  },
-  {
-    id: 3,
-    img: "/images/ourApproach/community.png",
-    title: "Community Engagement",
-    content:
-      "We collaborate with therapists, educators, and families to refine our products based on real-world feedback",
-  },
-];
-
-const values = [
-  {
-    id: 1,
-    icon: "/images/ourValues/safety.png",
-    title: "Safety and Durability",
-    content:
-      "Risk-free toys, safer and made for quality material for long durable toys.",
-  },
-  {
-    id: 2,
-    icon: "/images/ourValues/sustainable.png",
-    title: "Sustainable",
-    content: "Eco-friendly toys, plastic free, and socially responsible.",
-  },
-  {
-    id: 3,
-    icon: "/images/ourValues/community.png",
-    title: "Community",
-    content: "Designed in community, for community benefits.",
-  },
-  {
-    id: 4,
-    icon: "/images/ourValues/inclusion.png",
-    title: "Inclusion",
-    content:
-      "Inclusive design and educational positioning, to integrate the entire community.",
-  },
-  {
-    id: 5,
-    icon: "/images/ourValues/fun.png",
-    title: "Fun and Development",
-    content:
-      "Sensory, happy, fun and educational. Capable of entertaining at the same time that develops.",
-  },
-  {
-    id: 6,
-    icon: "/images/ourValues/practicality.png",
-    title: "Practicality",
-    content: "Easy to play and easy to clean.",
-  },
-];
+import EmailDialog from "./components/EmailDialog"; // Import EmailDialog
 
 export default function Home() {
   return (
@@ -111,18 +22,21 @@ export default function Home() {
                 Enhancing Playful Learning Experiences
               </p>
 
-              <button className="flex items-center gap-2 bg-[#C1D81D] text-black cursor-pointer font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#d4e171] transition mb-12">
-                <span className="text-2xl">
-                  <Image
-                    src="/icons/faces-icon.png"
-                    alt="Arrow Right"
-                    width={74}
-                    height={74}
-                    className="inline-block"
-                  />
-                </span>{" "}
-                Join Our Waitlist
-              </button>
+              {/* Button to trigger EmailDialog */}
+              <EmailDialog>
+                <div className="flex items-center gap-2 bg-[#C1D81D] text-black cursor-pointer font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#d4e171] transition mb-12">
+                  <span className="text-2xl">
+                    <Image
+                      src="/icons/faces-icon.png"
+                      alt="Arrow Right"
+                      width={74}
+                      height={74}
+                      className="inline-block"
+                    />
+                  </span>{" "}
+                  Join Our Waitlist
+                </div>
+              </EmailDialog>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
                 <div className="flex flex-col items-center text-center">
@@ -384,8 +298,17 @@ export default function Home() {
                   </p>
                 </div>
 
-                <form className="space-y-12">
+                <form
+                  className="space-y-12"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <input
+                      type="hidden"
+                      name="access_key"
+                      value="0f5a6f9b-a58c-441d-95f5-fd7371c2346a"
+                    ></input>
                     <div>
                       <input
                         type="text"
@@ -443,3 +366,93 @@ export default function Home() {
     </div>
   );
 }
+
+const cards = [
+  {
+    id: 1,
+    img: "/images/whatWeOffer/interactive.png",
+    title: "Designed for Engagement",
+    content:
+      "We create toys and accessories that cater to the unique needs of non-verbal autistic individuals, ensuring an engaging and enjoyable experience.",
+  },
+  {
+    id: 2,
+    img: "/images/whatWeOffer/durable.png",
+    title: "Built for Ease",
+    content:
+      "Our products are designed with practicality in mind—built to last, effortless to use, and easy to maintain for both individuals and caregivers.",
+  },
+  {
+    id: 3,
+    img: "/images/whatWeOffer/caregiver.png",
+    title: "Caregiver-Friendly",
+    content:
+      "We consider the needs of both non-verbal individuals and their caregivers, creating toys that bring comfort, joy, and ease into daily life.",
+  },
+];
+
+const approach = [
+  {
+    id: 1,
+    img: "/images/ourApproach/design.png",
+    title: "User-Centered Design",
+    content:
+      "We focus on intuitive, easy-to-use, and engaging designs that meet the needs of both users and caregivers.",
+  },
+  {
+    id: 2,
+    img: "/images/ourApproach/inclusion.png",
+    title: "Inclusive Innovation",
+    content:
+      "Our toys integrate sensory-friendly materials and technology to ensure accessibility for all.",
+  },
+  {
+    id: 3,
+    img: "/images/ourApproach/community.png",
+    title: "Community Engagement",
+    content:
+      "We collaborate with therapists, educators, and families to refine our products based on real-world feedback",
+  },
+];
+
+const values = [
+  {
+    id: 1,
+    icon: "/images/ourValues/safety.png",
+    title: "Safety and Durability",
+    content:
+      "Risk-free toys, safer and made for quality material for long durable toys.",
+  },
+  {
+    id: 2,
+    icon: "/images/ourValues/sustainable.png",
+    title: "Sustainable",
+    content: "Eco-friendly toys, plastic free, and socially responsible.",
+  },
+  {
+    id: 3,
+    icon: "/images/ourValues/community.png",
+    title: "Community",
+    content: "Designed in community, for community benefits.",
+  },
+  {
+    id: 4,
+    icon: "/images/ourValues/inclusion.png",
+    title: "Inclusion",
+    content:
+      "Inclusive design and educational positioning, to integrate the entire community.",
+  },
+  {
+    id: 5,
+    icon: "/images/ourValues/fun.png",
+    title: "Fun and Development",
+    content:
+      "Sensory, happy, fun and educational. Capable of entertaining at the same time that develops.",
+  },
+  {
+    id: 6,
+    icon: "/images/ourValues/practicality.png",
+    title: "Practicality",
+    content: "Easy to play and easy to clean.",
+  },
+];
